@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const UserPageContainer = styled.div`
   grid-column: 2;
   display: flex;
   position: relative;
@@ -10,4 +10,4 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-export default Wrapper;
+export default UserPageContainer;
