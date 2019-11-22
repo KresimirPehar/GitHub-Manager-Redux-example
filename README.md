@@ -1,7 +1,8 @@
 # GitHub Manager
 React app built with using:
 + React Hooks
-+ Redux
++ Redux (state managment)
++ Styled-components (CSS for styling React component systems)
 
 ### Install
 + Install [Node](https://nodejs.org/en/download/)
