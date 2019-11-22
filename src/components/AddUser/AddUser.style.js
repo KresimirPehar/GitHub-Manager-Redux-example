@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { StyledInput, positionMixin } from '../../styles/baseStyle';
 
-const Wrapper = styled.div`
+const Wrapper = styled.form`
   ${positionMixin('relative', '-80px', '-12px')}
   width: 247px;
 `;
