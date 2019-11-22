@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import User from '../User/User';
+import User from '../User';
 import StyledUserList from './UserList.style';
 
 const UserList = memo(({ users }) => {

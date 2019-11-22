@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addGitHubUser } from '../../redux/actions/userActions';
-import UserList from '../../components/UserList/UserList';
-import AddUser from '../../components/AddUser/AddUser';
+import UserList from '../../components/UserList';
+import AddUser from '../../components/AddUser';
 import Wrapper from './UsersPage.style';
 
 const UsersPage = ({ users }) => {

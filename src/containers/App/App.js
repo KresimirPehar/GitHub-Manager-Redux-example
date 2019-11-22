@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import UsersPage from '../UsersPage/UsersPage';
-import Search from '../Search/Search';
-import Header from '../../components/Header/Header';
+import UsersPage from '../UsersPage';
+import Search from '../Search';
+import Header from '../../components/Header';
 import Wrapper from './App.style';
 
 const App = () => {
