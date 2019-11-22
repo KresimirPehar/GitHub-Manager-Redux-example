@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { positionMixin } from '../../styles/baseStyle';
 
 const UserCard = styled.div`
   position: relative;
-  display: flex;
   flex-direction: column;
   border: 1px solid #000;
   border-radius: 3px;
@@ -16,17 +16,13 @@ const Photo = styled.img`
 `;
 
 const Name = styled.div`
-  position: absolute;
-  top: 10px;
-  left: 90px;
+  ${positionMixin('absolute', '10px', '90px')}
   font-weight: bold;
   font-size: 1em;
 `;
 
 const Location = styled.div`
-  position: absolute;
-  top: 30px;
-  left: 90px;
+  ${positionMixin('absolute', '30px', '90px')}
 `;
 
 export { UserCard, Photo, Name, Location };

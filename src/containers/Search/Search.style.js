@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import StyledInput from '../../styles/baseStyle';
+import { StyledInput, positionMixin } from '../../styles/baseStyle';
 
 const SearchContainer = styled.div`
   grid-column: 1;
@@ -9,16 +9,12 @@ const SearchContainer = styled.div`
 `;
 
 const Title = styled.div`
-  position: absolute;
-  top: 80px;
-  left: 210px;
+  ${positionMixin('absolute', '80px', '210px')}
   font-size: 1.1em;
 `;
 
 const Input = styled(StyledInput)`
-  position: absolute;
-  top: 110px;
-  left: 150px;
+  ${positionMixin('absolute', '110px', '150px')}
 `;
 
 export { SearchContainer, Title, Input };

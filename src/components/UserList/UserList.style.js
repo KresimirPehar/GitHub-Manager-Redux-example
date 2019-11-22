@@ -1,9 +1,8 @@
 import styled from 'styled-components';
+import { positionMixin } from '../../styles/baseStyle';
 
 const StyledUserList = styled.div`
-  position: relative;
-  top: 140px;
-  left: 250px;
+  ${positionMixin('relative', '-20px')}
   width: 270px;
   height: 400px;
   overflow-y: auto;

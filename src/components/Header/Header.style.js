@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { positionMixin } from '../../styles/baseStyle';
 
 const Title = styled.div`
   width: 100vw;
@@ -8,9 +9,7 @@ const Title = styled.div`
   color: #fff;
 
   span {
-    position: absolute;
-    top: 5px;
-    left: 150px;
+    ${positionMixin('absolute', '5px', '150px')}
     font-size: 1.7em;
   }
 `;
