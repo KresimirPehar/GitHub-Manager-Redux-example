@@ -34,7 +34,7 @@ const UsersPage = ({ users }) => {
       <ClipLoader
         color='#D0021B'
         loading={loading}
-        css='position: fixed; top: 150px'
+        css='position: absolute; top: 110px'
       />
       <AddUser
         userName={userName}
