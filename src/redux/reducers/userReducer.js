@@ -5,7 +5,7 @@ import {
   ADD_USER_BEGIN
 } from '../actions/userTypes';
 
-const initialState = {
+export const initialState = {
   user: [
     {
       avatarUrl: 'https://avatars3.githubusercontent.com/u/42438024?v=4',
