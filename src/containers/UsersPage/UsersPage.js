@@ -23,7 +23,7 @@ const UsersPage = ({ users }) => {
     setUserName(e.target.value);
   };
 
-  const onSave = e => {
+  const onSubmit = e => {
     e.preventDefault();
     dispatch(addGitHubUser(userName));
     setUserName('');
@@ -39,7 +39,7 @@ const UsersPage = ({ users }) => {
       <AddUser
         userName={userName}
         onChange={onChange}
-        onSave={onSave}
+        onSubmit={onSubmit}
         placeholder={placeholder}
       />
       <UserList users={users} />
