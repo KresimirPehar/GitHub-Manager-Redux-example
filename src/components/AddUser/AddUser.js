@@ -3,15 +3,16 @@ import { Wrapper, Input, Button } from './AddUser.style';
 
 const AddUser = ({ placeholder, userName, onChange, onSave }) => {
   return (
-    <Wrapper>
+    <Wrapper onSubmit={onSave} data-testid='form'>
       <Input
         type='text'
         placeholder={placeholder}
         value={userName}
         onChange={onChange}
         required
+        data-testid='input'
       />
-      <Button type='submit' onClick={onSave}>
+      <Button type='submit' onClick={onSave} data-testid='addUser'>
         Add
       </Button>
     </Wrapper>
