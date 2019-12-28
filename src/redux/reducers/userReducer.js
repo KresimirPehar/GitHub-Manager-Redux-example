@@ -5,19 +5,19 @@ import {
   ADD_USER_BEGIN
 } from '../actions/userTypes';
 
-const initialState = {
+export const initialState = {
   user: [
     {
       avatarUrl: 'https://avatars3.githubusercontent.com/u/42438024?v=4',
       name: 'Krešimir Pehar',
-      location: 'Split, Croatia'
+      location: 'Mostar, BIH'
     }
   ],
   filteredUser: [
     {
       avatarUrl: 'https://avatars3.githubusercontent.com/u/42438024?v=4',
       name: 'Krešimir Pehar',
-      location: 'Split, Croatia'
+      location: 'Mostar, BIH'
     }
   ],
   loading: false,

@@ -1,19 +1,18 @@
 import React from 'react';
 import { Wrapper, Input, Button } from './AddUser.style';
 
-const AddUser = ({ placeholder, userName, onChange, onSave }) => {
+const AddUser = ({ placeholder, userName, onChange, onSubmit }) => {
   return (
-    <Wrapper>
+    <Wrapper onSubmit={onSubmit} data-testid='addForm'>
       <Input
         type='text'
         placeholder={placeholder}
         value={userName}
         onChange={onChange}
+        data-testid='userNameInput'
         required
       />
-      <Button type='submit' onClick={onSave}>
-        Add
-      </Button>
+      <Button type='submit'>Add</Button>
     </Wrapper>
   );
 };

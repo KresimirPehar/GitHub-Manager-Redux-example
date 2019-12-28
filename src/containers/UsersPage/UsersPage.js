@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ClipLoader } from 'react-spinners';
+import { ClipLoader as LoadingSpinner } from 'react-spinners';
 import { addGitHubUser } from '../../redux/actions/userActions';
 import UserList from '../../components/UserList';
 import AddUser from '../../components/AddUser';
@@ -23,7 +23,7 @@ const UsersPage = ({ users }) => {
     setUserName(e.target.value);
   };
 
-  const onSave = e => {
+  const onSubmit = e => {
     e.preventDefault();
     dispatch(addGitHubUser(userName));
     setUserName('');
@@ -31,15 +31,15 @@ const UsersPage = ({ users }) => {
 
   return (
     <UserPageContainer>
-      <ClipLoader
+      <LoadingSpinner
         color='#D0021B'
         loading={loading}
-        css='position: fixed; top: 150px'
+        css='position: absolute; top: 110px'
       />
       <AddUser
         userName={userName}
         onChange={onChange}
-        onSave={onSave}
+        onSubmit={onSubmit}
         placeholder={placeholder}
       />
       <UserList users={users} />

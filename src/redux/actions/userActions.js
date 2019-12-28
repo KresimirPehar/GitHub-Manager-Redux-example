@@ -26,7 +26,7 @@ export const filterUser = user => ({
 
 export const addGitHubUser = userName => dispatch => {
   dispatch(addUserBegin());
-  axios.get(`https://api.github.com/users/${userName}`).then(
+  return axios.get(`https://api.github.com/users/${userName}`).then(
     result => {
       const user = {
         avatarUrl: result.data.avatar_url,

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { positionMixin } from '../../styles/baseStyle';
+import { positionMixin } from '../../utils/styles/baseStyle';
 
 const StyledUserList = styled.div`
-  ${positionMixin('relative', '-20px')}
-  width: 270px;
+  ${positionMixin('absolute', '160px')};
+  width: 247px;
   height: 400px;
   overflow-y: auto;
 `;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { StyledInput, positionMixin } from '../../styles/baseStyle';
+import { StyledInput, positionMixin } from '../../utils/styles/baseStyle';
 
 const Wrapper = styled.form`
-  ${positionMixin('relative', '-80px', '-12px')}
+  ${positionMixin('absolute', '62px')};
   width: 247px;
 `;
 
