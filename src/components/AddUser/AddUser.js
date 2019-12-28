@@ -9,12 +9,10 @@ const AddUser = ({ placeholder, userName, onChange, onSubmit }) => {
         placeholder={placeholder}
         value={userName}
         onChange={onChange}
-        data-testid='input'
+        data-testid='userNameInput'
         required
       />
-      <Button type='submit' onClick={onSubmit} data-testid='addButton'>
-        Add
-      </Button>
+      <Button type='submit'>Add</Button>
     </Wrapper>
   );
 };

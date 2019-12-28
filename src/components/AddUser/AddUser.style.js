@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StyledInput, positionMixin } from '../../styles/baseStyle';
+import { StyledInput, positionMixin } from '../../utils/styles/baseStyle';
 
 const Wrapper = styled.form`
   ${positionMixin('absolute', '62px')};
