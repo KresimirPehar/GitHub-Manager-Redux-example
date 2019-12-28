@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { positionMixin } from '../../styles/baseStyle';
+import { positionMixin } from '../../utils/styles/baseStyle';
 
 const UserCard = styled.div`
   position: relative;
