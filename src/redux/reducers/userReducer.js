@@ -10,14 +10,14 @@ export const initialState = {
     {
       avatarUrl: 'https://avatars3.githubusercontent.com/u/42438024?v=4',
       name: 'Krešimir Pehar',
-      location: 'Split, Croatia'
+      location: 'Mostar, BIH'
     }
   ],
   filteredUser: [
     {
       avatarUrl: 'https://avatars3.githubusercontent.com/u/42438024?v=4',
       name: 'Krešimir Pehar',
-      location: 'Split, Croatia'
+      location: 'Mostar, BIH'
     }
   ],
   loading: false,
