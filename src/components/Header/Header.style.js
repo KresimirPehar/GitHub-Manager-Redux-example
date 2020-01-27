@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { positionMixin } from '../../styles/baseStyle';
+import { positionMixin } from '../../utils/styles/baseStyle';
 
 const Title = styled.div`
   width: 100vw;
