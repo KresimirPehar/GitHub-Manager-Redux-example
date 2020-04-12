@@ -24,19 +24,17 @@ export const filterUser = user => ({
   user
 });
 
-export const addGitHubUser = userName => dispatch => {
+export const addGitHubUser = userName => async dispatch => {
   dispatch(addUserBegin());
-  return axios.get(`https://api.github.com/users/${userName}`).then(
-    result => {
-      const user = {
-        avatarUrl: result.data.avatar_url,
-        name: result.data.name,
-        location: result.data.location
-      };
-      dispatch(addUser(user));
-    },
-    () => {
-      dispatch(addUserError());
-    }
-  );
+  try {
+    const result = await axios.get(`https://api.github.com/users/${userName}`);
+    const user = {
+      avatarUrl: result.data.avatar_url,
+      name: result.data.name,
+      location: result.data.location
+    };
+    dispatch(addUser(user));
+  } catch (e) {
+    dispatch(addUserError());
+  }
 };
