@@ -1,20 +1,24 @@
 import React from 'react';
-import { render, fireEvent, cleanup } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import axios from 'axios';
+import { initialState as userInitialState } from '../../redux/reducers/userReducer';
 import UsersPage from './UsersPage';
-import userReducer, {
-  initialState as userInitialState
-} from '../../redux/reducers/userReducer';
+import mockedUser from '../../redux/mocks/addUserMock';
 
-afterEach(cleanup);
+const middlewares = [thunk];
+const mockStore = configureMockStore(middlewares);
+
+jest.mock('axios');
 
 const renderWithRedux = (
   component,
   {
     initialState = { users: userInitialState },
-    store = createStore(userReducer, initialState)
+    store = mockStore(initialState)
   } = {}
 ) => render(<Provider store={store}>{component}</Provider>);
 
@@ -36,11 +40,18 @@ it('should set userName on input change', () => {
   expect(input.value).toEqual('testInput');
 });
 
-// it('should add user to user list on form submit', async () => {
-//   const { getByTestId } = renderWithRedux(
-//     <UsersPage users={userInitialState.filteredUser} />
-//   );
-//   fireEvent.submit(getByTestId('addForm'));
-// });
-
-// TODO - waitForElement users list after dispatching addUser action
+it('should dispatch add user action on button click', async () => {
+  axios.get.mockResolvedValue({ data: mockedUser });
+  const { getByRole, getByPlaceholderText } = renderWithRedux(
+    <UsersPage users={userInitialState.filteredUser} />
+  );
+  const input = getByPlaceholderText(/username/i);
+  fireEvent.change(input, {
+    target: { value: mockedUser.name }
+  });
+  fireEvent.click(getByRole('button', { name: /add/i }));
+  expect(axios.get).toHaveBeenCalled();
+  expect(axios.get).toHaveBeenCalledWith(
+    `https://api.github.com/users/${mockedUser.name}`
+  );
+});
