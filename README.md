@@ -2,18 +2,17 @@
 
 React app built with using:
 
-- React Hooks
 - Redux (state managment)
-- Jest & React testing library
+- Jest & React testing library (testing)
 - Styled-components (CSS for styling React component systems)
 
 ### Install
 
 - Install [Node](https://nodejs.org/en/download/)
 
-- Clone the repository and in the root directory hit "npm install"
+- Clone the repository and in the root directory type "npm install"
 
-- Hit "npm start" to run the app.
+- Type "npm start" to run the app.
 
 Enjoy!
 
