@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import Wrapper from './App.style';
 
 const App = () => {
-  const filteredUser = useSelector(state => state.users.filteredUser);
+  const filteredUser = useSelector(state => state.filteredUser);
 
   return (
     <Wrapper>

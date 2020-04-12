@@ -9,8 +9,8 @@ import UserPageContainer from './UsersPage.style';
 const UsersPage = ({ users }) => {
   const [userName, setUserName] = useState('');
   const [placeholder, setPlaceholder] = useState('Enter Github Username . . .');
-  const userError = useSelector(state => state.users.error);
-  const loading = useSelector(state => state.users.loading);
+  const userError = useSelector(state => state.error);
+  const loading = useSelector(state => state.loading);
   const dispatch = useDispatch();
 
   useEffect(() => {
