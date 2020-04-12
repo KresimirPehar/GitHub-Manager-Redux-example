@@ -23,7 +23,7 @@ const UsersPage = ({ users }) => {
     setUserName(e.target.value);
   };
 
-  const onSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault();
     dispatch(addGitHubUser(userName));
     setUserName('');
