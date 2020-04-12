@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { UserCard, Photo, Name, Location } from './User.style';
 
-const User = ({ avatarUrl, name, location }) => {
+const User = memo(({ avatarUrl, name, location }) => {
   return (
     <UserCard>
       <Photo src={avatarUrl} />
@@ -9,6 +9,6 @@ const User = ({ avatarUrl, name, location }) => {
       <Location>{location}</Location>
     </UserCard>
   );
-};
+});
 
 export default User;
