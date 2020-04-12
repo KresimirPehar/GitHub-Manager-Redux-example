@@ -3,7 +3,7 @@ import { Wrapper, Input, Button } from './AddUser.style';
 
 const AddUser = ({ placeholder, userName, onChange, onSubmit }) => {
   return (
-    <Wrapper onSubmit={onSubmit} data-testid='addForm'>
+    <Wrapper data-testid='addForm'>
       <Input
         type='text'
         placeholder={placeholder}
@@ -12,7 +12,9 @@ const AddUser = ({ placeholder, userName, onChange, onSubmit }) => {
         data-testid='userNameInput'
         required
       />
-      <Button type='submit'>Add</Button>
+      <Button onClick={onSubmit} type='submit'>
+        Add
+      </Button>
     </Wrapper>
   );
 };
